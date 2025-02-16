@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 
-export async function POST(req: NextRequest) {
+// Handle both GET and POST requests
+export async function GET(req: NextRequest) {
   return handleRevalidate(req);
 }
 
-// Allow GET requests for manual testing
-export async function GET(req: NextRequest) {
+export async function POST(req: NextRequest) {
   return handleRevalidate(req);
 }
 
