@@ -1,7 +1,7 @@
 // Define the menu items
 export const mainMenu = {
   home: "/",
-  about: "https://github.com/9d8dev/next-wp",
+  about: "https://github.com/ecommercelauncher/headless-wp/blob/main/README.md",
   blog: "/posts",
 };
 
