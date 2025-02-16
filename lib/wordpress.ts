@@ -56,12 +56,25 @@ async function wordpressFetch<T>(
   options: FetchOptions = {}
 ): Promise<T> {
   const userAgent = "Next.js WordPress Client";
+  
+  // Fetch credentials from environment variables
+  const username = process.env.WORDPRESS_API_USERNAME;
+  const password = process.env.WORDPRESS_API_PASSWORD;
+
+  if (!username || !password) {
+    throw new Error("Missing WORDPRESS_API_USERNAME or WORDPRESS_API_PASSWORD environment variables.");
+  }
+
+  // Encode credentials for Basic Authentication
+  const encodedCredentials = Buffer.from(`${username}:${password}`).toString("base64");
 
   const response = await fetch(url, {
     ...defaultFetchOptions,
     ...options,
     headers: {
       "User-Agent": userAgent,
+      "Authorization": `Basic ${encodedCredentials}`, // Add authentication header
+      "Content-Type": "application/json",
     },
   });
 
