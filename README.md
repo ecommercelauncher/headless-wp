@@ -4,11 +4,19 @@
 
 ![CleanShot 2025-01-07 at 23 18 41@2x](https://github.com/user-attachments/assets/8b268c36-eb0d-459f-b9f1-b5f129bd29bc)
 
-[![Deploy with Vercel](https://vercel.com/button)](<https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F9d8dev%2Fnext-wp&env=WORDPRESS_URL,WORDPRESS_HOSTNAME,WORDPRESS_WEBHOOK_SECRET&envDescription=Add%20WordPress%20URL%20with%20Rest%20API%20enabled%20(ie.%20https%3A%2F%2Fwp.example.com)%2C%20the%20hostname%20for%20Image%20rendering%20in%20Next%20JS%20(ie.%20wp.example.com)%2C%20and%20a%20secret%20key%20for%20secure%20revalidation&project-name=next-wp&repository-name=next-wp&demo-title=Next%20JS%20and%20WordPress%20Starter&demo-url=https%3A%2F%2Fwp.9d8.dev>)
+[![Deploy with Vercel](https://vercel.com/button)](<https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fecommercelauncher%2Fheadless-wp&env=WORDPRESS_URL,WORDPRESS_HOSTNAME,WORDPRESS_API_USERNAME,WORDPRESS_API_PASSWORD&envDescription=Add%20WordPress%20URL%20with%20Rest%20API%20enabled%20(ie.%20https%3A%2F%2Fwp.example.com)%20and%20the%20hostname%20for%20Image%20rendering%20in%20Next%20JS%20(ie.%20wp.example.com)&project-name=headless-wp&repository-name=headless-wp&demo-title=Ecommerce%20Launcher%20Modified%20Next%20JS%20and%20Headless%20WordPress%20Starter>)
 
 This is a starter template for building a Next.js application that fetches data from a WordPress site using the WordPress REST API. The template includes functions for fetching posts, categories, tags, authors, and featured media from a WordPress site and rendering them in a Next.js application.
 
-`next-wp` is built with [Next.js 15](https://nextjs.org/docs), [React](https://react.dev/), [Typescript](https://www.typescriptlang.org/docs/), [Tailwind](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/docs), and [brijr/craft](https://github.com/brijr/craft). It pairs nicely with [brijr/components](https://components.bridger.to/) for a rapid development experience. Built by Cameron and Bridger at [9d8](https://9d8.dev).
+`next-wp` is built with [Next.js 15](https://nextjs.org/docs), [React](https://react.dev/), [Typescript](https://www.typescriptlang.org/docs/), [Tailwind](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/docs), and [brijr/craft](https://github.com/brijr/craft). It pairs nicely with [brijr/components](https://components.bridger.to/) for a rapid development experience. Originally built by Cameron and Bridger at [9d8](https://9d8.dev). This version includes modifications by [Indraneil Khedekar](https://in.linkedin.com/in/indraneil) at [Ecommerce Launcher](https://ecommercelauncher.com/) to enable the template to work with restricted WordPress APIs.
+
+## Modifications in This Version
+
+This fork of `next-wp` includes the following enhancements:
+
+- **WordPress REST API Authentication:** Added Basic Authentication using WordPress Application Passwords, allowing deployments on Vercel to securely access the REST API.
+- **Environment-Based Credentials:** API requests now use credentials stored in environment variables (`.env.local`).
+- **Updated API Request Function:** Modified the `wordpressFetch<T>` function in `lib/wordpress.ts` to include authentication headers for REST API requests.
 
 ## Table of Contents
 
@@ -470,4 +478,8 @@ await revalidateWordPressData(["category-456"]);
 
 This system ensures your content stays fresh while maintaining optimal performance through intelligent caching.
 
-Built by [Bridger Tower](https://twitter.com/bridgertower) and [Cameron Youngblood](https://twitter.com/youngbloodcyb) at [9d8](https://9d8.dev)
+## Forked from 9d8
+
+This project is a fork of [next-wp](https://github.com/9d8dev/next-wp), originally developed by [Bridger Tower](https://twitter.com/bridgertower) and [Cameron Youngblood](https://twitter.com/youngbloodcyb) at [9d8](https://9d8.dev) under the MIT license.
+
+This version, modified by [Indraneil Khedekar](https://in.linkedin.com/in/indraneil) at [Ecommerce Launcher](https://ecommercelauncher.com/), introduces authentication support for WordPress REST API requests. The original MIT license remains in effect, and all credit for the base framework goes to the original authors.
