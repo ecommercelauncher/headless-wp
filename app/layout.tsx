@@ -24,7 +24,7 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: "WordPress & Next.js Starter",
   description:
     "A starter template for Next.js with WordPress as a headless CMS.",
   metadataBase: new URL(siteConfig.site_domain),
@@ -94,7 +94,7 @@ const Nav = ({ className, children, id }: NavProps) => {
             ))}
           </div>
           <Button asChild className="hidden sm:flex">
-            <Link href="https://github.com/9d8dev/next-wp">Get Started</Link>
+            <Link href="https://github.com/ecommercelauncher/headless-wp/">Get Started</Link>
           </Button>
           <MobileNav />
         </div>
