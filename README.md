@@ -8,7 +8,9 @@
 
 This is a starter template for building a Next.js application that fetches data from a WordPress site using the WordPress REST API. The template includes functions for fetching posts, categories, tags, authors, and featured media from a WordPress site and rendering them in a Next.js application.
 
-`next-wp` is built with [Next.js 15](https://nextjs.org/docs), [React](https://react.dev/), [Typescript](https://www.typescriptlang.org/docs/), [Tailwind](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/docs), and [brijr/craft](https://github.com/brijr/craft). It pairs nicely with [brijr/components](https://components.bridger.to/) for a rapid development experience. Originally built by Cameron and Bridger at [9d8](https://9d8.dev). This version includes modifications by [Indraneil Khedekar](https://in.linkedin.com/in/indraneil) at [Ecommerce Launcher](https://ecommercelauncher.com/) to enable the template to work with restricted WordPress APIs.
+`next-wp` is built with [Next.js 15](https://nextjs.org/docs), [React](https://react.dev/), [Typescript](https://www.typescriptlang.org/docs/), [Tailwind](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/docs), and [brijr/craft](https://github.com/brijr/craft). It pairs nicely with [brijr/components](https://components.bridger.to/) for a rapid development experience.
+
+Originally built by Cameron and Bridger at [9d8](https://9d8.dev). This version includes modifications by [Indraneil Khedekar](https://in.linkedin.com/in/indraneil) at [Ecommerce Launcher](https://ecommercelauncher.com/).
 
 ## Modifications in This Version
 
@@ -17,6 +19,8 @@ This fork of `next-wp` includes the following enhancements:
 - **WordPress REST API Authentication:** Added Basic Authentication using WordPress Application Passwords, allowing deployments on Vercel to securely access the REST API.
 - **Environment-Based Credentials:** API requests now use credentials stored in environment variables (`.env.local`).
 - **Updated API Request Function:** Modified the `wordpressFetch<T>` function in `lib/wordpress.ts` to include authentication headers for REST API requests.
+- **Automatic Cache Revalidation:** Implemented webhook-based revalidation, ensuring that the Next.js frontend automatically updates when posts, pages, or categories are created, updated, or deleted in WordPress.
+- **Secure Webhook Authentication:** Introduced `WORDPRESS_WEBHOOK_SECRET` to validate webhook requests and prevent unauthorized cache clearing.
 
 ## Table of Contents
 
