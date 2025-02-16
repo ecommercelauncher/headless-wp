@@ -48,7 +48,7 @@ const ToDelete = () => {
         <div className="flex items-center gap-3">
           <a
             className="h-auto block"
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F9d8dev%2Fnext-wp&env=WORDPRESS_URL,WORDPRESS_HOSTNAME&envDescription=Add%20WordPress%20URL%20with%20Rest%20API%20enabled%20(ie.%20https%3A%2F%2Fwp.example.com)%20abd%20the%20hostname%20for%20Image%20rendering%20in%20Next%20JS%20(ie.%20wp.example.com)&project-name=next-wp&repository-name=next-wp&demo-title=Next%20JS%20and%20WordPress%20Starter&demo-url=https%3A%2F%2Fwp.9d8.dev"
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fecommercelauncher%2Fheadless-wp&env=WORDPRESS_URL,WORDPRESS_HOSTNAME,WORDPRESS_API_USERNAME,WORDPRESS_API_PASSWORD,WORDPRESS_WEBHOOK_SECRET&envDescription=Add%20WordPress%20URL%20with%20Rest%20API%20enabled%20(ie.%20https%3A%2F%2Fwp.example.com)%20and%20the%20hostname%20for%20Image%20rendering%20in%20Next%20JS%20(ie.%20wp.example.com)&project-name=headless-wp&repository-name=headless-wp&demo-title=Next%20JS%20and%20WordPress%20Starter%20by%20Ecommerce%20Launcher"
           >
             {/* eslint-disable-next-line */}
             <img
@@ -133,7 +133,7 @@ const ToDelete = () => {
         </Link>
         <a
           className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="https://github.com/9d8dev/next-wp/blob/main/README.md"
+          href="https://github.com/ecommercelauncher/headless-wp/blob/main/README.md"
         >
           <Folder size={32} />
           <span>
